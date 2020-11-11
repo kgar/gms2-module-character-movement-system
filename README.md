@@ -10,4 +10,4 @@ I would like to create something that can be plugged into a game and leveraged t
 - Player Character sprite management when moving
 - ...
 
-Having used RPG Maker as a kid, I became pretty spoiled with the eventing and sprite system of the various RM engines. In GMS2, making my own eventing system inspired by RM engines will provide some much-needed structure that'll cut down on imperative code and open up opportunities for greater levels of abstraction of common coding tasks.
+Having used RPG Maker as a kid, I became pretty spoiled with the eventing and sprite system of the various RM engines. In GMS2, making my own eventing system inspired by RM engines will provide some much-needed structure that'll cut down on imperative code and open up opportunities for greater levels of abstraction of common coding tasks. However, because it's GMS2, the level of customization is endless, which is appealing, since I don't want to make an RPG Maker Game™.
