@@ -1,6 +1,6 @@
 # To Do
-- Pull in standing / walking sprites for 3 people
-- Implement player character 4-directional movement
+- Pull in standing / walking sprites for 3 more people
+- Make camera follow player; see FC's examples
 - Set up collision detection
   - Make sure the character can't overstep into the collision object
 - Ensure that the player character can face a direction even when up against a collided object in that direction
