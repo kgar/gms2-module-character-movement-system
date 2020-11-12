@@ -1,3 +1,11 @@
 # To Do
-- Plan movement system
+- Pull in standing / walking sprites for 3 people
+- Implement player character 4-directional movement
+- Set up collision detection
+  - Make sure the character can't overstep into the collision object
+- Ensure that the player character can face a direction even when up against a collided object in that direction
+- Extract standing/walking/dir state and sprite settings into a driver
+- Create a few NPCs and enforce collision detection
+- Create some lightweight scripts for NPC random movement that leverages the movement driver to set NPC state and move them around
+- Make sure NPCs and PC don't overstep when walking toward one another
 - ...
