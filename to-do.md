@@ -1,8 +1,8 @@
 # To Do
-- Pull in standing / walking sprites for 3 more people
-- Make camera follow player; see FC's examples
 - Set up collision detection
   - Make sure the character can't overstep into the collision object
+  - Some intel for collision detection:
+    - 
 - Ensure that the player character can face a direction even when up against a collided object in that direction
 - Extract standing/walking/dir state and sprite settings into a driver
 - Create a few NPCs and enforce collision detection
