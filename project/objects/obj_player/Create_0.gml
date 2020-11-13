@@ -3,6 +3,7 @@ enum MovementState {
 	Walking
 }
 
+walkStartIndex = 1;
 standingIndex = 0;
 walkSpeed = 2;
 walkAnimationSpeed = 2;
@@ -36,11 +37,18 @@ function walk_down() {
 }
 
 function walk() {
+	if (movementState == MovementState.Walking) {
+		return;
+	}
 	image_speed = walkAnimationSpeed;
+	image_index = walkStartIndex;
 	movementState = MovementState.Walking;
 }
 
 function stop() {
+	if (movementState == MovementState.Standing) {
+		return;
+	}
 	image_speed = 0;
 	image_index = standingIndex;
 	movementState = MovementState.Standing;
