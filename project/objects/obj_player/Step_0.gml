@@ -2,23 +2,23 @@ var moveX = 0;
 var moveY = 0;
 
 if (keyboard_check(ord("W"))) {
-	walk_up();
+	walkMovementDriver.move_up();
 	moveY = -walkSpeed;
 } 
 else if (keyboard_check(ord("A"))) {
-	walk_left();
+	walkMovementDriver.move_left();
 	moveX = -walkSpeed;
 }
 else if (keyboard_check(ord("S"))) {
-	walk_down();
+	walkMovementDriver.move_down();
 	moveY = walkSpeed;
 }
 else if (keyboard_check(ord("D"))) {
-	walk_right();
+	walkMovementDriver.move_right();
 	moveX = walkSpeed;
 
 } else {
-	stop();
+	walkMovementDriver.stop();
 }
 
 

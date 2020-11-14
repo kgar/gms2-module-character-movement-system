@@ -1,0 +1,5 @@
+enum MovementState {
+	Standing,
+	Moving
+}
+
