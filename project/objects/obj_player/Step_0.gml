@@ -21,5 +21,16 @@ else if (keyboard_check(ord("D"))) {
 	stop();
 }
 
+
+while (moveX != 0 && place_meeting(x + moveX, y, obj_solid)) {
+	moveX -= sign(moveX);
+	stop();
+}
+
+while (moveY != 0 && place_meeting(x, y + moveY, obj_solid)) {
+	moveY -= sign(moveY);
+	stop();
+}
+
 x += moveX;
 y += moveY;

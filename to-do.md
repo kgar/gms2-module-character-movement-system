@@ -1,13 +1,5 @@
 # To Do
-- Set up collision detection; keep it simple for this repo
-  - Make sure the character can't overstep into the collision object
-  - Good lead that leverages the "solid" checkbox: https://www.youtube.com/watch?v=yDBRSwS4vXw
-  - Keep the collision mask on the legs so that the character can walk up to walls and stuff: https://www.youtube.com/watch?v=f9XnGCEuWOA 
-    - Needs depth ordering in order for this to work well: https://www.youtube.com/watch?v=7tm6BJ5xLNk
-  - Closing the gap for movers with higher speed: https://youtu.be/f9XnGCEuWOA?t=345
-    - Alternate example: https://youtu.be/VISOUbdx_eE?t=372
-- Ensure that the player character can face a direction even when up against a collided object in that direction
-- Extract standing/walking/dir state and sprite settings into a driver
+- Evaluate and extract standing/walking/dir/collision(?) state and sprite settings into a driver
 - Create a few NPCs and enforce collision detection
 - Create some lightweight scripts for NPC random movement that leverages the movement driver to set NPC state and move them around
 - Make sure NPCs and PC don't overstep when walking toward one another
