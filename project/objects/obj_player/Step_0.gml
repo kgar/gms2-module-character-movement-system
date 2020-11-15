@@ -24,12 +24,12 @@ else if (keyboard_check(ord("D"))) {
 
 while (moveX != 0 && place_meeting(x + moveX, y, obj_solid)) {
 	moveX -= sign(moveX);
-	stop();
+	walkMovementDriver.stop();
 }
 
 while (moveY != 0 && place_meeting(x, y + moveY, obj_solid)) {
 	moveY -= sign(moveY);
-	stop();
+	walkMovementDriver.stop();
 }
 
 x += moveX;
