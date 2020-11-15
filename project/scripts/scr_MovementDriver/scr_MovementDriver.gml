@@ -54,3 +54,23 @@ function MovementDriver(_targetId, _moveUpSprite, _moveDownSprite, _moveLeftSpri
 		movementState = MovementState.Standing;
 	}
 }
+
+/*
+  Note to self: calling place_meeting() from within the main MovementDriver struct 
+  causes the VM to crash, and YYC compiler completely ignores it.
+  Hence, this standalone function is not inside the MovementDriver.
+*/
+function MovementDriver_step(_x, _y, driver) {
+	while (_x != 0 && place_meeting(id.x + _x, id.y, obj_solid)) {
+		_x -= sign(_x);
+		driver.stop();
+	}
+
+	while (_y != 0 && place_meeting(id.x, id.y + _y, obj_solid)) {
+		_y -= sign(_y);
+		driver.stop();
+	}
+
+	id.x += _x;
+	id.y += _y;
+}

@@ -30,7 +30,12 @@ Moving X/Y movement and collision detection into the driver is likely a good cho
 
 This type of setup could still be leveraged by a cutscene object, because the cutscene would control how far the object is moving during each step. The movement driver would simply respect collision detection and sprite choices.
 
-Current thought about Option 1: I'd like to try this approach out.
+Current thought about Option 1: I'd like to try this approach out. However, when I try to do it, the game crashes without warning when it calls `place_meeting` from within the _step() function. If I switch from VM to YYC compiler, it just ignores the place_meeting function call.
+
+So, in order to get this one to work, I'll need to get creative...
+
+I was able to get past this odd limitation by using a standalone function that performs the work and requires the coords and the driver itself. Meh, but it'll do.
 
 Option 2: No
 
+I would have to copy/paste collision logic here and there. Not so much a fan of this option.

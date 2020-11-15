@@ -21,16 +21,4 @@ else if (keyboard_check(ord("D"))) {
 	walkMovementDriver.stop();
 }
 
-
-while (moveX != 0 && place_meeting(x + moveX, y, obj_solid)) {
-	moveX -= sign(moveX);
-	walkMovementDriver.stop();
-}
-
-while (moveY != 0 && place_meeting(x, y + moveY, obj_solid)) {
-	moveY -= sign(moveY);
-	walkMovementDriver.stop();
-}
-
-x += moveX;
-y += moveY;
+MovementDriver_step(moveX, moveY, walkMovementDriver);
