@@ -61,6 +61,34 @@ function MovementDriver(_targetId, _moveUpSprite, _moveDownSprite, _moveLeftSpri
   Hence, this standalone function is not inside the MovementDriver.
 */
 function MovementDriver_step(_x, _y, driver) {
+	
+	//// Hold onto these alternative movement blocks in case I run into issues with the while() loop version
+	//if (_x != 0 && place_meeting(id.x + _x, id.y, obj_solid)) {
+	//	repeat(abs(_x)) {
+	//		if (!place_meeting(id.x + _x, id.y, obj_solid)) {
+	//			id.x += sign(_x);
+	//		}
+	//		else {
+	//			break;
+	//		}
+	//	}
+	//	_x = 0;
+	//	driver.stop();
+	//}
+	
+	//if (_y != 0 && place_meeting(id.x, id.y + _y, obj_solid)) {
+	//	repeat(abs(_y)) {
+	//		if (!place_meeting(id.x, id.y + _y, obj_solid)) {
+	//			id.y += sign(_y);
+	//		}
+	//		else {
+	//			break;
+	//		}
+	//	}
+	//	_y = 0;
+	//	driver.stop();
+	//}
+	
 	while (_x != 0 && place_meeting(id.x + _x, id.y, obj_solid)) {
 		_x -= sign(_x);
 		driver.stop();

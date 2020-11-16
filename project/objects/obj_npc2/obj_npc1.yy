@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "spr_solid",
-    "path": "sprites/spr_solid/spr_solid.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "spriteMaskId": null,
@@ -24,11 +21,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Movement",
-    "path": "folders/Objects/Movement.yy",
+    "name": "Demo",
+    "path": "folders/Objects/Demo.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_solid",
+  "name": "obj_npc1",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -1,13 +1,19 @@
 {
   "spriteId": {
-    "name": "spr_solid",
-    "path": "sprites/spr_solid/spr_solid.yy",
+    "name": "spr_fghtr4_walk_down",
+    "path": "sprites/spr_fghtr4_walk_down/spr_fghtr4_walk_down.yy",
   },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_medium_collision_mask",
+    "path": "sprites/spr_medium_collision_mask/spr_medium_collision_mask.yy",
+  },
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "obj_solid",
+    "path": "objects/obj_solid/obj_solid.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -24,11 +30,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Movement",
-    "path": "folders/Objects/Movement.yy",
+    "name": "Demo",
+    "path": "folders/Objects/Demo.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_solid",
+  "name": "obj_npc3",
   "tags": [],
   "resourceType": "GMObject",
 }

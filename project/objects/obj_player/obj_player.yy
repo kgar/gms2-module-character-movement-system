@@ -1,8 +1,14 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "spr_fighter_walk_down",
+    "path": "sprites/spr_fighter_walk_down/spr_fighter_walk_down.yy",
+  },
   "solid": false,
   "visible": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_medium_collision_mask",
+    "path": "sprites/spr_medium_collision_mask/spr_medium_collision_mask.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
@@ -24,8 +30,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Demo",
+    "path": "folders/Objects/Demo.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_player",
