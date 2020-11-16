@@ -1,8 +1,5 @@
 # To Do
-- Finish the NPCs with having them stand still
-- Create obj_medium_humanoid and give it some variables that can be set upon creation
-- Create a new NPC with this more decoupled method
-- Convert / remove all other NPCs in favor of this NPC management style
+- Import some more sprites and create a few NPCs via controller on room start
 - Create some lightweight scripts for NPC random movement that leverages the movement driver to set NPC state and move them around
   - Method 1: Allowed movement zone
   - Method 2: Stage spikes and grid-guided path-finding
@@ -21,4 +18,8 @@
 - Support player character running.
   - You can swap out the RPG Maker sprite with an existing sprite that has a run animation, if you are feeling adventurous.
   - Sprite Resource has some Suikoden sprites 😲
-- 
+  - Perhaps running and walking should be in the same driver, as options on the move method?
+    - This would require receiving sprites for running as well.
+
+# Thoughts
+- Maybe I'll feel better when running is also integrated into the MovementDriver, but something feels a bit off.

@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "spr_fghtr3_walk_down",
-    "path": "sprites/spr_fghtr3_walk_down/spr_fghtr3_walk_down.yy",
+    "name": "spr_medium_collision_mask",
+    "path": "sprites/spr_medium_collision_mask/spr_medium_collision_mask.yy",
   },
   "solid": false,
   "visible": true,
@@ -26,7 +26,10 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_npc","path":"objects/obj_npc/obj_npc.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
@@ -34,7 +37,7 @@
     "path": "folders/Objects/Demo.yy",
   },
   "resourceVersion": "1.0",
-  "name": "obj_npc2",
+  "name": "obj_npc",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -16,6 +16,26 @@ function MovementDriver(_targetId, _moveUpSprite, _moveDownSprite, _moveLeftSpri
 	target.sprite_index = moveDownSprite;
 	target.image_speed = 0;
 
+	function face_up() {
+		target.sprite_index = moveUpSprite;
+		stop();
+	}
+	
+	function face_down() {
+		target.sprite_index = moveDownSprite;
+		stop();
+	}
+	
+	function face_left() {
+		target.sprite_index = moveLeftSprite;
+		stop();
+	}
+	
+	function face_right() {
+		target.sprite_index = moveRightSprite;
+		stop();
+	}
+
 	function move_up() {
 		target.sprite_index = moveUpSprite;
 		move();
