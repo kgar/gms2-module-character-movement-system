@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"db57b1f6-d443-4a9a-a041-5cba4b6feb4e","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Characters",
+    "path": "folders/Sprites/Demo/Characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_fighter_walk_right",

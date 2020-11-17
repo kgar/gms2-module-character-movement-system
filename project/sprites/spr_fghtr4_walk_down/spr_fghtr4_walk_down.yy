@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e88c51e3-f36c-4ad6-9fc5-c997e6590b4a","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Characters",
+    "path": "folders/Sprites/Demo/Characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_fghtr4_walk_down",

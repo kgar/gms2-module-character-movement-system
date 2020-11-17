@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"3bfffc0e-6bd7-4bd0-9501-5f9d41e7cd99","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Movement",
+    "path": "folders/Sprites/Movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_solid",

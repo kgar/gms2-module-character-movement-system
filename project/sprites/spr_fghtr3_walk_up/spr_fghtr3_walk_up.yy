@@ -80,8 +80,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5091616f-7401-4f3f-8dd3-1a245c713209","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Characters",
+    "path": "folders/Sprites/Demo/Characters.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_fghtr3_walk_up",

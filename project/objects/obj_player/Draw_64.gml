@@ -1,0 +1,1 @@
+draw_text(30, 30, "Player Depth: " + string(depth));

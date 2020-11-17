@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"fe1374f8-fd0b-43b8-a8a7-6ff653b9904d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Movement",
+    "path": "folders/Sprites/Movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_medium_collision_mask",
