@@ -1,5 +1,5 @@
 walkSpeed = 2;
-walkMovementDriver = new MovementDriver(
+movementDriver = new MovementDriver(
 	id,
 	spr_fighter_walk_up, 
 	spr_fighter_walk_down, 

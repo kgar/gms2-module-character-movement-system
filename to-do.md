@@ -1,6 +1,7 @@
 # To Do
+- Bumbler AI does not respect collisions; figure out and fix
+- Clean up Bumbler AI; does this need to be a sub-class of NPC? Can it be scripted somehow?
 - Create some lightweight scripts for NPC random movement that leverages the movement driver to set NPC state and move them around
-  - Method 1: Allowed movement zone
   - Method 2: Stage spikes and grid-guided path-finding
   - Method 3: Follow the player loosely, face same direction
     - Create multiple objects that follow in this manner

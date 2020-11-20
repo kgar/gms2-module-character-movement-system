@@ -7,4 +7,6 @@ movementDriver = new MovementDriver(
 	1,
 	0,
 	2
-)
+);
+
+ai = new scr_BumblerNpcAi(id, 750, 430, 970, 670);

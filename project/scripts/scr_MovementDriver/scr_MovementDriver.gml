@@ -80,8 +80,8 @@ function MovementDriver(_targetId, _moveUpSprite, _moveDownSprite, _moveLeftSpri
   causes the VM to crash, and YYC compiler completely ignores it.
   Hence, this standalone function is not inside the MovementDriver.
 */
-function MovementDriver_step(_x, _y, driver) {
-	
+function MovementDriver_step(_x, _y, _target) {
+		
 	//// Hold onto these alternative movement blocks in case I run into issues with the while() loop version
 	//if (_x != 0 && place_meeting(id.x + _x, id.y, obj_solid)) {
 	//	repeat(abs(_x)) {
@@ -109,16 +109,16 @@ function MovementDriver_step(_x, _y, driver) {
 	//	driver.stop();
 	//}
 	
-	while (_x != 0 && place_meeting(id.x + _x, id.y, obj_solid)) {
+	while (_x != 0 && place_meeting(_target.x + _x, _target.y, obj_solid)) {
 		_x -= sign(_x);
-		driver.stop();
+		_target.movementDriver.stop();
 	}
-
-	while (_y != 0 && place_meeting(id.x, id.y + _y, obj_solid)) {
+	
+	while (_y != 0 && place_meeting(_target.x, _target.y + _y, obj_solid)) {
 		_y -= sign(_y);
-		driver.stop();
+		_target.movementDriver.stop();
 	}
 
-	id.x += _x;
-	id.y += _y;
+	_target.x += _x;
+	_target.y += _y;
 }
