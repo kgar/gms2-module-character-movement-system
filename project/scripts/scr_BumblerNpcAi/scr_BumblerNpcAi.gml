@@ -30,7 +30,7 @@ function scr_BumblerNpcAi(_object, _x1, _y1, _x2, _y2) constructor {
 		
 		// Transition
 		if (timer >= waitTime) {
-			state = states[BumblerStates.Move];
+			state = BumblerStates.Move;
 			timer = undefined;
 			waitTime = undefined;
 		}
@@ -94,7 +94,7 @@ function scr_BumblerNpcAi(_object, _x1, _y1, _x2, _y2) constructor {
 		
 		// Transition
 		if (objectXBeforeMove == object.x && objectYBeforeMove == object.y) {
-			state = states[BumblerStates.Wait];
+			state = BumblerStates.Wait;
 			destX = undefined;
 			destY = undefined;
 			dir = undefined;
@@ -103,9 +103,9 @@ function scr_BumblerNpcAi(_object, _x1, _y1, _x2, _y2) constructor {
 
 	states[BumblerStates.Wait] = WaitState;
 	states[BumblerStates.Move] = MoveState;
-	state = states[irandom_range(BumblerStates.Wait, BumblerStates.Move)];
+	state = irandom_range(BumblerStates.Wait, BumblerStates.Move);
 
 	function _step() {
-		state();
+		script_execute(states[state])
 	}
 }
