@@ -6,7 +6,7 @@ movementDriver = new MovementDriver(
 	spr_fghtr3_walk_right,
 	1,
 	0,
-	2
+	1
 );
 
-ai = new scr_BumblerNpcAi(id, 750, 430, 970, 670);
+ai_bumbler_apply(750, 430, 970, 670);

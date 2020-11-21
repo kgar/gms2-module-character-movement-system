@@ -1,22 +1,31 @@
 # To Do
-- Bumbler AI does not respect collisions; figure out and fix
-  - remove bumbler from struct factory and create disparate scripts for each bumbler state, like [FC's tutorial](https://www.youtube.com/watch?v=DYkJ91eg67Y)
-  - how do I track bumbler state when calling scripts?
-    - variable_instance_get
-      - variable_instance_get returns undefined for unset variables (perfect)
-      - when setting the variable, use id.varName = "some value"; good to go
-- Clean up Bumbler AI; does this need to be a sub-class of NPC? Can it be scripted somehow?
-- Create some lightweight scripts for NPC random movement that leverages the movement driver to set NPC state and move them around
+- Put a true FPS debug counter up
+  - Steal it from the dialogue project
+- Create some lightweight scripts for NPC random movement that leverage the movement driver to set NPC state and move them around
   - Method 2: Stage spikes and grid-guided path-finding
   - Method 3: Follow the player loosely, face same direction
     - Create multiple objects that follow in this manner
   - Method 4: Lufia-style follow the player directly behind
 - ...
 
+# Refine
+- Tweak the bumbler ai scripts
+  - Move less quickly
+  - Move less distance overall
+  - Increase the minimum wait-around time
+  - Create script for generating zones from x/y values relative to an object
+    - Init another NPC with a zone created in this way
+  - Figure out why one of the NPCs is animating seemingly way faster when walking up
+
+
 # Refactor
+- Reduce the variable surface area used by any scripts that set instance variables on the fly.
+  - Consider using a struct per state
+  - Consider prepending the struct name with the particular script set, such as ai_bumbler_WalkParams, ai_bumbler_MoveParams
 - Is there a more elegant way to handle the movement code?
 - Create some global variables (or scripts) which contain the sprite association for each NPC
   - Replace manual room-based instance creation with a simple function call / global variable grab that assigns all the relevant movement / sprite values
+- MovementDriver as a struct factory is probably a mistake, given the experience with place_meeting and with how much easier direct script calls are. Given that there is some kind of mixin capability with regular scripts, consider a similar approach. 
 
 # Stretch
 - Make a little port town with roads, a few houses, stuff lying around, etc. Use this as a chance to get to know room editing in GMS 2. 

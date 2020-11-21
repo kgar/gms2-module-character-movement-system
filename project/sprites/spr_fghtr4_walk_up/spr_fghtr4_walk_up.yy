@@ -41,7 +41,7 @@
     "spriteId": {"name":"spr_fghtr4_walk_up","path":"sprites/spr_fghtr4_walk_up/spr_fghtr4_walk_up.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 8.0,
+    "playbackSpeed": 4.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -1,4 +1,4 @@
 movementDriver = undefined;
-ai = undefined;
-moveX = 0;
-moveY = 0;
+states = [ai_stand_still];
+state = 0;
+walkSpeed = 1;

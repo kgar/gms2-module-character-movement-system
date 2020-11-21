@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Demo.yy",
   },
   "resourceVersion": "1.0",
-  "name": "scr_BumblerNpcAi",
+  "name": "scr_ai_bumbler",
   "tags": [],
   "resourceType": "GMScript",
 }
