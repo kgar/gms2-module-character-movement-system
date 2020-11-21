@@ -2,7 +2,9 @@
 - Bumbler AI does not respect collisions; figure out and fix
   - remove bumbler from struct factory and create disparate scripts for each bumbler state, like [FC's tutorial](https://www.youtube.com/watch?v=DYkJ91eg67Y)
   - how do I track bumbler state when calling scripts?
-    - variable_instance_exists, variable_instance_set
+    - variable_instance_get
+      - variable_instance_get returns undefined for unset variables (perfect)
+      - when setting the variable, use id.varName = "some value"; good to go
 - Clean up Bumbler AI; does this need to be a sub-class of NPC? Can it be scripted somehow?
 - Create some lightweight scripts for NPC random movement that leverages the movement driver to set NPC state and move them around
   - Method 2: Stage spikes and grid-guided path-finding
