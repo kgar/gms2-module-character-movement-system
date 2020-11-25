@@ -1,10 +1,10 @@
 # To Do
+- Implement Waypoint AI
 - Create some lightweight scripts for NPC random movement that leverage the movement driver to set NPC state and move them around
-  - Waypoint AI
-  - Passerby
-  - Follow the player loosely, face same direction
-    - Create multiple objects that follow in this manner
-  - Lufia-style follow the player directly behind
+- Implement Passerby AI
+- Implement AI to Follow the player loosely, face same direction
+  - Create multiple objects that follow in this manner
+- Implement Lufia-style AI to follow the player directly behind
 - ...
 
 # Refine
