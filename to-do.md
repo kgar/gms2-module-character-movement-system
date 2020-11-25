@@ -1,10 +1,5 @@
 # To Do
 - Implement motion planning demo room
-  - Create NPC on screen
-  - Wherever the mouse drags, show potential path from NPC to mouse
-  - Ensure path is 0, 90, 180, 270 degrees only and centered in a 32x32 cell
-  - On mouse left click, start the NPC down the indicated path
-    - While the NPC is attempting the path, the path should remain the same
   - On mouse right click, toggle an obj_solid obstacle, snapped to the indicate cell
   - Using a sequential state machine, ensure 
     - the NPC reroutes when encountering a collision
