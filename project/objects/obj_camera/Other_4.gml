@@ -9,3 +9,5 @@ if (instance_exists(following)) {
 	var newY = following.y - guiHeight / 2;
 	camera_set_view_pos(view, newX, newY);
 }
+
+show_debug_overlay(true);

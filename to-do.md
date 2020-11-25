@@ -1,11 +1,10 @@
 # To Do
-- Put a true FPS debug counter up
-  - Steal it from the dialogue project
 - Create some lightweight scripts for NPC random movement that leverage the movement driver to set NPC state and move them around
-  - Method 2: Stage spikes and grid-guided path-finding
-  - Method 3: Follow the player loosely, face same direction
+  - Waypoint AI
+  - Passerby
+  - Follow the player loosely, face same direction
     - Create multiple objects that follow in this manner
-  - Method 4: Lufia-style follow the player directly behind
+  - Lufia-style follow the player directly behind
 - ...
 
 # Refine
