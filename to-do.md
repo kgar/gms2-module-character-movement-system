@@ -1,5 +1,19 @@
 # To Do
-- Implement Waypoint AI
+- Implement motion planning demo room
+  - Create NPC on screen
+  - Wherever the mouse drags, show potential path from NPC to mouse
+  - Ensure path is 0, 90, 180, 270 degrees only and centered in a 32x32 cell
+  - On mouse left click, start the NPC down the indicated path
+    - While the NPC is attempting the path, the path should remain the same
+  - On mouse right click, toggle an obj_solid obstacle, snapped to the indicate cell
+  - Using a sequential state machine, ensure 
+    - the NPC reroutes when encountering a collision
+    - the NPC does not overlap with a collision place
+  - Determine what will happen if the NPC is placed off-grid at first
+  - Put the obj_player on the screen and try to break the path-finding code
+- Return to the main demo room with that new knowledge!
+- Implement "Go to Waypoint" AI action
+- Implement a sequential NPC script consisting of waiting around, going to various waypoints, facing directions, etc.
 - Implement Passerby AI
 - Implement AI to Follow the player loosely, face same direction
   - Create multiple objects that follow in this manner

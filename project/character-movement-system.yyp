@@ -9,10 +9,12 @@
     {"id":{"name":"scr_ai_stand_still","path":"scripts/scr_ai_stand_still/scr_ai_stand_still.yy",},"order":1,},
     {"id":{"name":"spr_fghtr5_walk_down","path":"sprites/spr_fghtr5_walk_down/spr_fghtr5_walk_down.yy",},"order":12,},
     {"id":{"name":"scr_ai_bumbler","path":"scripts/scr_ai_bumbler/scr_ai_bumbler.yy",},"order":0,},
+    {"id":{"name":"obj_mp_demo_controller","path":"objects/obj_mp_demo_controller/obj_mp_demo_controller.yy",},"order":7,},
     {"id":{"name":"spr_fighter_walk_up","path":"sprites/spr_fighter_walk_up/spr_fighter_walk_up.yy",},"order":23,},
     {"id":{"name":"scr_state_machines","path":"scripts/scr_state_machines/scr_state_machines.yy",},"order":2,},
     {"id":{"name":"scr_utilities","path":"scripts/scr_utilities/scr_utilities.yy",},"order":3,},
     {"id":{"name":"spr_medium_collision_mask","path":"sprites/spr_medium_collision_mask/spr_medium_collision_mask.yy",},"order":0,},
+    {"id":{"name":"rm_mp_test","path":"rooms/rm_mp_test/rm_mp_test.yy",},"order":1,},
     {"id":{"name":"scr_movement_enums","path":"scripts/scr_movement_enums/scr_movement_enums.yy",},"order":0,},
     {"id":{"name":"spr_fghtr4_walk_left","path":"sprites/spr_fghtr4_walk_left/spr_fghtr4_walk_left.yy",},"order":9,},
     {"id":{"name":"spr_fighter_walk_left","path":"sprites/spr_fighter_walk_left/spr_fighter_walk_left.yy",},"order":21,},
@@ -43,7 +45,7 @@
     {"id":{"name":"spr_fighter_walk_down","path":"sprites/spr_fighter_walk_down/spr_fighter_walk_down.yy",},"order":20,},
     {"id":{"name":"spr_fghtr6_walk_down","path":"sprites/spr_fghtr6_walk_down/spr_fghtr6_walk_down.yy",},"order":16,},
     {"id":{"name":"spr_fghtr2_walk_up","path":"sprites/spr_fghtr2_walk_up/spr_fghtr2_walk_up.yy",},"order":3,},
-    {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},"order":0,},
+    {"id":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},"order":0,},
   ],
   "Options": [
     {"name":"Linux","path":"options/linux/options_linux.yy",},
@@ -59,7 +61,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
+    {"roomId":{"name":"rm_mp_test","path":"rooms/rm_mp_test/rm_mp_test.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
