@@ -1,1 +1,3 @@
-script_execute(states[state]);
+if (stateMachineFunction != undefined) {
+	script_execute(stateMachineFunction);
+}

@@ -3,17 +3,18 @@ enum AI_BumblerState {
 	Move
 }
 
-function ai_bumbler_apply(_zoneX1, _zoneY1, _zoneX2, _zoneY2) {
+function ai_bumbler_create(_zoneX1, _zoneY1, _zoneX2, _zoneY2) {
 	zoneX1 = coalesce(_zoneX1, 0);
 	zoneY1 = coalesce(_zoneY1, 0);
 	zoneX2 = coalesce(_zoneX2, room_width);
 	zoneY2 = coalesce(_zoneY2, room_height);
 	walkSpeed = walkSpeed > 0 ? walkSpeed : 0.5;
 	
-	states = [];
+	var states = array_create(2);
 	states[AI_BumblerState.Wait] = ai_bumbler_wait;
 	states[AI_BumblerState.Move] = ai_bumbler_move;
-	state = irandom_range(AI_BumblerState.Wait, AI_BumblerState.Move);
+	var startingState = irandom_range(AI_BumblerState.Wait, AI_BumblerState.Move);
+	return unmanaged_state_machine_create(states, startingState);
 }
 
 function ai_bumbler_wait() {
@@ -22,7 +23,7 @@ function ai_bumbler_wait() {
 		movementDriver.stop();
 		timer = 0;
 		waitTime = irandom_range(1, 5) * room_speed;
-		return;
+		return AI_BumblerState.Wait;
 	}
 		
 	// Take Action
@@ -30,10 +31,12 @@ function ai_bumbler_wait() {
 		
 	// Transition
 	if (timer >= waitTime) {
-		state = AI_BumblerState.Move;
 		timer = undefined;
 		waitTime = undefined;
+		return AI_BumblerState.Move;
 	}
+	
+	return AI_BumblerState.Wait;
 }
 
 function ai_bumbler_move() {
@@ -47,7 +50,7 @@ function ai_bumbler_move() {
 		// TODO: Make this a little more refined?
 		destX = x + moveX;
 		destY = y + moveY;
-		return;
+		return AI_BumblerState.Move;
 	}
 		
 	// Take Action
@@ -89,9 +92,11 @@ function ai_bumbler_move() {
 		
 	// Transition
 	if (objectXBeforeMove == x && objectYBeforeMove == y) {
-		state = AI_BumblerState.Wait;
 		destX = undefined;
 		destY = undefined;
 		dir = undefined;
+		return AI_BumblerState.Wait;
 	}
+	
+	return AI_BumblerState.Move;
 }

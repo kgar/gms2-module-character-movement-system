@@ -10,6 +10,7 @@
     {"id":{"name":"spr_fghtr5_walk_down","path":"sprites/spr_fghtr5_walk_down/spr_fghtr5_walk_down.yy",},"order":12,},
     {"id":{"name":"scr_ai_bumbler","path":"scripts/scr_ai_bumbler/scr_ai_bumbler.yy",},"order":0,},
     {"id":{"name":"spr_fighter_walk_up","path":"sprites/spr_fighter_walk_up/spr_fighter_walk_up.yy",},"order":23,},
+    {"id":{"name":"scr_state_machines","path":"scripts/scr_state_machines/scr_state_machines.yy",},"order":2,},
     {"id":{"name":"scr_utilities","path":"scripts/scr_utilities/scr_utilities.yy",},"order":3,},
     {"id":{"name":"spr_medium_collision_mask","path":"sprites/spr_medium_collision_mask/spr_medium_collision_mask.yy",},"order":0,},
     {"id":{"name":"scr_movement_enums","path":"scripts/scr_movement_enums/scr_movement_enums.yy",},"order":0,},

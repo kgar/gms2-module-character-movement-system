@@ -1,4 +1,3 @@
 movementDriver = undefined;
-states = [ai_stand_still];
-state = 0;
+stateMachineFunction = seq_state_machine_create([ai_stand_still])
 walkSpeed = 1;

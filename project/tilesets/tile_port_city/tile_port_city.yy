@@ -1,5 +1,4 @@
 {
-  "name": "tile_port_city",
   "spriteId": {
     "name": "spr_tiles_PortCity_ext",
     "path": "sprites/spr_tiles_PortCity_ext/spr_tiles_PortCity_ext.yy",
@@ -1061,6 +1060,7 @@
     "path": "folders/Tile Sets.yy",
   },
   "resourceVersion": "1.0",
+  "name": "tile_port_city",
   "tags": [],
   "resourceType": "GMTileSet",
 }

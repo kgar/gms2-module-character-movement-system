@@ -9,4 +9,4 @@ movementDriver = new MovementDriver(
 	1
 );
 
-ai_bumbler_apply(750, 430, 970, 670);
+stateMachineFunction = ai_bumbler_create(750, 430, 970, 670);
