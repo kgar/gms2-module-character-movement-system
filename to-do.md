@@ -26,10 +26,12 @@
 
 
 # Refactor
+- Remove default state machine of stand_still and have all default NPCs face down on creation.
 - Reduce the variable surface area used by any scripts that set instance variables on the fly.
   - Consider using a struct per state
   - Consider prepending the struct name with the particular script set, such as ai_bumbler_WalkParams, ai_bumbler_MoveParams
 - Is there a more elegant way to handle the movement code?
+- There is a `direction` instance variable built right in. Update the movement code to rely on this field.
 - Create some global variables (or scripts) which contain the sprite association for each NPC
   - Replace manual room-based instance creation with a simple function call / global variable grab that assigns all the relevant movement / sprite values
 - MovementDriver as a struct factory is probably a mistake, given the experience with place_meeting and with how much easier direct script calls are. Given that there is some kind of mixin capability with regular scripts, consider a similar approach. 
