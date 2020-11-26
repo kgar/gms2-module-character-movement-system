@@ -44,3 +44,7 @@ if (inst_fred.path_position == 1) {
 	fredIsMoving = false;
 	inst_fred.movementDriver.stop();
 }
+
+if (mouse_check_button_pressed(mb_right)) {
+	wall_toggle_cell(mouse_x, mouse_y);
+}

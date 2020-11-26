@@ -1,6 +1,8 @@
 # To Do
 - Implement motion planning demo room
-  - On mouse right click, toggle an obj_solid obstacle, snapped to the indicate cell
+  - Either 
+    - switch from grid approach to individual potential paths and refresh path on collision
+    - or use one grid per NPC and refresh grid on collision
   - Using a sequential state machine, ensure 
     - the NPC reroutes when encountering a collision
     - the NPC does not overlap with a collision place
@@ -26,12 +28,17 @@
 
 
 # Refactor
+- There is a `direction` instance variable built right in. Update the movement code to rely on this field.
+  - Determine sprite orientation based on direction range
+    - Right: 306-45
+    - Up: 46-135
+    - Left: 136-225
+    - Down: 226-305 
 - Remove default state machine of stand_still and have all default NPCs face down on creation.
 - Reduce the variable surface area used by any scripts that set instance variables on the fly.
   - Consider using a struct per state
   - Consider prepending the struct name with the particular script set, such as ai_bumbler_WalkParams, ai_bumbler_MoveParams
 - Is there a more elegant way to handle the movement code?
-- There is a `direction` instance variable built right in. Update the movement code to rely on this field.
 - Create some global variables (or scripts) which contain the sprite association for each NPC
   - Replace manual room-based instance creation with a simple function call / global variable grab that assigns all the relevant movement / sprite values
 - MovementDriver as a struct factory is probably a mistake, given the experience with place_meeting and with how much easier direct script calls are. Given that there is some kind of mixin capability with regular scripts, consider a similar approach. 
