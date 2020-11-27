@@ -1,13 +1,7 @@
 # To Do
-- Set up a system where certain NPC lifetime events are able to run an array of callbacks for their event
-  - Use scripts for managing the instance variables and then processing them. 
-  - Have an NPC that uses waypoints create a path and register it dynamically for deletion in the object's cleanup event callback array.
 - Implement motion planning demo room
-  - Rework the responsibilities of the grid and paths
-    - A room controller should have the grid
-      - Clean up grid on Room End
-    - Instances should each have their own paths as needed
-      - Clean up path on Clean Up
+  - Upgrade the sequential state machine to have an option for not looping, making it an optional finite state machine.
+  - Update demo to implant a finite state machine in Fred, styled as a queue of events.
   - For any NPC who is walking a path, add eventing for detecting a collision with obj_solid and set current path position to previous
   - Upgrade collision management to include some optional handlers for a collision
     - Default: Wait for obstacle to move

@@ -1,3 +1,5 @@
+var grid = global.grid;
+
 if (!fredIsMoving) {
 	var x_cell = floor(mouse_x / cellSize);
 	var y_cell = floor(mouse_y / cellSize);

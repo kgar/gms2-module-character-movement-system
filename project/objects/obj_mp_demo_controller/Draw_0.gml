@@ -1,3 +1,5 @@
+var grid = global.grid;
+
 if (showGrid) {
 	draw_set_alpha(0.3);
 	mp_grid_draw(grid);

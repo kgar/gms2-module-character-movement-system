@@ -9,4 +9,3 @@ movementDriver = new MovementDriver(
 	1
 );
 
-stateMachineFunction = undefined;

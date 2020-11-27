@@ -32,6 +32,7 @@
     {"id":{"name":"spr_fighter_walk_right","path":"sprites/spr_fighter_walk_right/spr_fighter_walk_right.yy",},"order":22,},
     {"id":{"name":"spr_fghtr6_walk_left","path":"sprites/spr_fghtr6_walk_left/spr_fghtr6_walk_left.yy",},"order":17,},
     {"id":{"name":"spr_tiles_PortCity_ext","path":"sprites/spr_tiles_PortCity_ext/spr_tiles_PortCity_ext.yy",},"order":0,},
+    {"id":{"name":"scr_mp_manager","path":"scripts/scr_mp_manager/scr_mp_manager.yy",},"order":2,},
     {"id":{"name":"spr_fghtr4_walk_right","path":"sprites/spr_fghtr4_walk_right/spr_fghtr4_walk_right.yy",},"order":10,},
     {"id":{"name":"spr_fghtr5_walk_left","path":"sprites/spr_fghtr5_walk_left/spr_fghtr5_walk_left.yy",},"order":13,},
     {"id":{"name":"spr_solid","path":"sprites/spr_solid/spr_solid.yy",},"order":1,},
@@ -65,8 +66,8 @@
     "children": [],
   },
   "RoomOrderNodes": [
-    {"roomId":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
     {"roomId":{"name":"rm_mp_test","path":"rooms/rm_mp_test/rm_mp_test.yy",},},
+    {"roomId":{"name":"rm_demo","path":"rooms/rm_demo/rm_demo.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

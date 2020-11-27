@@ -14,23 +14,21 @@ function wall_toggle_cell(_x, _y) {
 }
 
 function mp_grid_cells_refresh() {
+	var grid = global.grid;
+
 	mp_grid_clear_all(grid);
 	
 	var gridCellSize = cellSize;
 	var theGrid = grid;
-	with(obj_solid) {
-			
-		show_debug_message("Obj name: " + string(object_get_name(object_index)));
-		if (object_get_name(object_index) != "obj_npc") {			
-			var top_cell_y = floor(y / gridCellSize);
-			var left_cell_x = floor(x / gridCellSize);
-			var bottom_cell_y = floor((y +  bbox_bottom - bbox_top) / gridCellSize);
-			var right_cell_x = floor((x + bbox_right - bbox_left) / gridCellSize);
+	with(obj_wall) {
+		var top_cell_y = floor(y / gridCellSize);
+		var left_cell_x = floor(x / gridCellSize);
+		var bottom_cell_y = floor((y +  bbox_bottom - bbox_top) / gridCellSize);
+		var right_cell_x = floor((x + bbox_right - bbox_left) / gridCellSize);
 		
-			mp_grid_add_cell(theGrid, left_cell_x, top_cell_y);
-			mp_grid_add_cell(theGrid, right_cell_x, top_cell_y);
-			mp_grid_add_cell(theGrid, left_cell_x, bottom_cell_y);
-			mp_grid_add_cell(theGrid, right_cell_x, bottom_cell_y);
-		}
+		mp_grid_add_cell(theGrid, left_cell_x, top_cell_y);
+		mp_grid_add_cell(theGrid, right_cell_x, top_cell_y);
+		mp_grid_add_cell(theGrid, left_cell_x, bottom_cell_y);
+		mp_grid_add_cell(theGrid, right_cell_x, bottom_cell_y);
 	}
 }
