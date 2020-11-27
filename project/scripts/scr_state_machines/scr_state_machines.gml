@@ -1,13 +1,13 @@
 function seq_state_machine_create(params){
 	var length = array_length(params);
 	seq_state_machine_states = array_create(length);
-	seq_state_machine_args = array_create(length);
+	seq_state_machine_props = array_create(length);
 	seq_state_machine_index = 0;
 	
 	for (var i = 0; i < length; i++) {
 		var param = params[i];
 		seq_state_machine_states[i] = variable_struct_get(param, "state");
-		seq_state_machine_args[i] = variable_struct_get(param, "args");
+		seq_state_machine_props[i] = variable_struct_get(param, "props");
 	}
 	
 	state_machine_events_apply(seq_state_machine_step, undefined);
@@ -15,9 +15,9 @@ function seq_state_machine_create(params){
 
 function seq_state_machine_step() {
 	var action = seq_state_machine_states[seq_state_machine_index];
-	var args = seq_state_machine_args[seq_state_machine_index];
+	var props = seq_state_machine_props[seq_state_machine_index];
 	
-	if (action(args) == StateProgress.Continue) {
+	if (action(props) == StateProgress.Continue) {
 		seq_state_machine_index = (seq_state_machine_index + 1) % array_length(seq_state_machine_states);
 	}
 }
