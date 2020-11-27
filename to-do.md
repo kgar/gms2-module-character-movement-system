@@ -1,8 +1,16 @@
 # To Do
 - Implement motion planning demo room
-  - Either 
-    - switch from grid approach to individual potential paths and refresh path on collision
-    - or use one grid per NPC and refresh grid on collision
+  - Rework the responsibilities of the grid and paths
+    - A room controller should have the grid
+      - Clean up grid on Room End
+    - Instances should each have their own paths as needed
+      - Clean up path on Clean Up
+  - For any NPC who is walking a path, add eventing for detecting a collision with obj_solid and set current path position to previous
+  - Upgrade collision management to include some optional handlers for a collision
+    - Default: Wait for obstacle to move
+    - Wait for a random period of time and then reroute
+    - Reroute immediately
+    - Wait for a random period and then enable pass-through 
   - Using a sequential state machine, ensure 
     - the NPC reroutes when encountering a collision
     - the NPC does not overlap with a collision place
