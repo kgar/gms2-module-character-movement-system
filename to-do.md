@@ -1,7 +1,7 @@
 # To Do
 - Implement motion planning demo room
-  - Upgrade the sequential state machine to have an option for not looping, making it an optional finite state machine.
-  - Update demo to implant a finite state machine in Fred, styled as a queue of events.
+  - Update demo to implant an event queue in Fred where he follows the current path to the waypoint
+    - Implement the bare minimum for this
   - For any NPC who is walking a path, add eventing for detecting a collision with obj_solid and set current path position to previous
   - Upgrade collision management to include some optional handlers for a collision
     - Default: Wait for obstacle to move

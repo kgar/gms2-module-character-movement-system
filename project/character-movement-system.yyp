@@ -30,6 +30,7 @@
     {"id":{"name":"spr_fghtr3_walk_up","path":"sprites/spr_fghtr3_walk_up/spr_fghtr3_walk_up.yy",},"order":7,},
     {"id":{"name":"spr_road1","path":"sprites/spr_road1/spr_road1.yy",},"order":2,},
     {"id":{"name":"spr_fighter_walk_right","path":"sprites/spr_fighter_walk_right/spr_fighter_walk_right.yy",},"order":22,},
+    {"id":{"name":"scr_ai_action_stop","path":"scripts/scr_ai_action_stop/scr_ai_action_stop.yy",},"order":5,},
     {"id":{"name":"spr_fghtr6_walk_left","path":"sprites/spr_fghtr6_walk_left/spr_fghtr6_walk_left.yy",},"order":17,},
     {"id":{"name":"spr_tiles_PortCity_ext","path":"sprites/spr_tiles_PortCity_ext/spr_tiles_PortCity_ext.yy",},"order":0,},
     {"id":{"name":"scr_mp_manager","path":"scripts/scr_mp_manager/scr_mp_manager.yy",},"order":2,},
