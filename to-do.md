@@ -1,4 +1,7 @@
 # To Do
+- Set up a system where certain NPC lifetime events are able to run an array of callbacks for their event
+  - Use scripts for managing the instance variables and then processing them. 
+  - Have an NPC that uses waypoints create a path and register it dynamically for deletion in the object's cleanup event callback array.
 - Implement motion planning demo room
   - Rework the responsibilities of the grid and paths
     - A room controller should have the grid

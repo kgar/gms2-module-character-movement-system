@@ -1,3 +1,1 @@
-if (stateMachineFunction != undefined) {
-	script_execute(stateMachineFunction);
-}
+state_machine_try_step();

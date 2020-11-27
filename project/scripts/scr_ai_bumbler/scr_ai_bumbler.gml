@@ -3,7 +3,7 @@ enum AI_BumblerState {
 	Move
 }
 
-function ai_bumbler_create(_zoneX1, _zoneY1, _zoneX2, _zoneY2) {
+function ai_bumbler_apply(_zoneX1, _zoneY1, _zoneX2, _zoneY2) {
 	zoneX1 = coalesce(_zoneX1, 0);
 	zoneY1 = coalesce(_zoneY1, 0);
 	zoneX2 = coalesce(_zoneX2, room_width);
@@ -14,7 +14,9 @@ function ai_bumbler_create(_zoneX1, _zoneY1, _zoneX2, _zoneY2) {
 	states[AI_BumblerState.Wait] = ai_bumbler_wait;
 	states[AI_BumblerState.Move] = ai_bumbler_move;
 	var startingState = irandom_range(AI_BumblerState.Wait, AI_BumblerState.Move);
-	return unmanaged_state_machine_create(states, startingState);
+	
+	var stateMachineStepFunction = unmanaged_state_machine_create(states, startingState);
+	state_machine_events_apply(stateMachineStepFunction, undefined);
 }
 
 function ai_bumbler_wait() {
