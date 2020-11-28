@@ -1,6 +1,15 @@
 # To Do
 - Implement motion planning demo room
-  - Update demo to implant an event queue in Fred where he follows the current path to the waypoint
+  - Update sprite management for NPCs so that facing and walking sprites can be applied via script
+    - Use the event array technique to make a composite of step events
+      - Handle stepping based on path speed and direction
+      - Handle stepping based on speed and direction
+        -  There is a `direction` instance variable built right in. Update the movement code to rely on this field.
+           - Determine sprite orientation based on direction range
+             - Right: 306-45
+             - Up: 46-135
+             - Left: 136-225
+             - Down: 226-305 
   - For any NPC who is walking a path, add eventing for detecting a collision with obj_solid and set current path position to previous
   - Upgrade collision management to include some optional handlers for a collision
     - Default: Wait for obstacle to move
@@ -32,12 +41,6 @@
 
 
 # Refactor
-- There is a `direction` instance variable built right in. Update the movement code to rely on this field.
-  - Determine sprite orientation based on direction range
-    - Right: 306-45
-    - Up: 46-135
-    - Left: 136-225
-    - Down: 226-305 
 - Remove default state machine of stand_still and have all default NPCs face down on creation.
 - Reduce the variable surface area used by any scripts that set instance variables on the fly.
   - Consider using a struct per state

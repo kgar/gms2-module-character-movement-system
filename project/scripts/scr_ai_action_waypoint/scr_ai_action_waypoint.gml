@@ -11,6 +11,8 @@ function ai_action_waypoint(props){
 		mp_grid_path(props.grid, props.path, id.x, id.y, position_x, position_y, false);
 		path_start(props.path, props.speed, path_action_stop, true);
 		
+		props.started = true;
+		
 		return StateProgress.Continue;
 	}
 	

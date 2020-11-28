@@ -12,6 +12,7 @@ function seq_state_machine_create(params, loop){
 	
 	if (loop != true) {
 		array_push(seq_state_machine_states, ai_action_stop);
+		array_push(seq_state_machine_props, undefined);
 	}
 	
 	state_machine_events_apply(seq_state_machine_step, undefined);
@@ -59,21 +60,25 @@ function state_machine_events_apply(_step, _cleanUp) {
 
 function state_machine_events_remove() {
 	stateMachineStep = undefined;
-	if (stateMachineCleanUp != undefined) {
-		script_execute(stateMachineCleanUp);
+	
+	var cleanUp = variable_instance_get(id, "stateMachineCleanUp");
+	if (cleanUp != undefined) {
+		script_execute(cleanUp);
 		stateMachineCleanUp = undefined;
 	}
 }
 
 function state_machine_try_step() {
-	if (stateMachineStep != undefined) {
-		script_execute(stateMachineStep);
+	var step = variable_instance_get(id, "stateMachineStep");
+	if (step != undefined) {
+		script_execute(step);
 	}
 }
 
 function state_machine_try_clean_up() {
-	if (stateMachineCleanUp != undefined) {
-		script_execute(stateMachineCleanUp);
+	var cleanUp = variable_instance_get(id, "stateMachineCleanUp");
+	if (cleanUp != undefined) {
+		script_execute(cleanUp);
 	}
 }
 

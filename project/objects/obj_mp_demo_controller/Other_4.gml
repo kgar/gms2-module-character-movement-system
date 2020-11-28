@@ -13,5 +13,3 @@ with (inst_fred) {
 	fredPath = path_add();
 	global_paths_add(fredPath);
 }
-
-fredIsMoving = false;
