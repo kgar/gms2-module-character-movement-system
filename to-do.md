@@ -1,7 +1,6 @@
 # To Do
 - Implement motion planning demo room
   - Update demo to implant an event queue in Fred where he follows the current path to the waypoint
-    - Implement the bare minimum for this
   - For any NPC who is walking a path, add eventing for detecting a collision with obj_solid and set current path position to previous
   - Upgrade collision management to include some optional handlers for a collision
     - Default: Wait for obstacle to move
