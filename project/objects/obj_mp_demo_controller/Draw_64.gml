@@ -1,3 +1,10 @@
-
 draw_text(30, 30, "Fred Direction: " + string(inst_fred.direction));
 draw_text(30, 60, "Fred Path Position: " + string(inst_fred.path_position));
+draw_text(30, 90, "Fred Path Speed: " + string(inst_fred.path_speed));
+draw_text(30, 120, "Fred Speed: " + string(inst_fred.speed));
+draw_text(30, 150, "Fred x / y: " + string(inst_fred.x) + ", " +  string(inst_fred.y));
+draw_text(30, 180, "Fred prev x / y: " + string(inst_fred.xprevious) + ", " +  string(inst_fred.yprevious));
+var snapX = string((mouse_x div 32) * 32 + 16);
+var snapY = string((mouse_y div 32) * 32 + 16);
+draw_text(30, 210, "Mouse snap target x / y: " + snapX + ", " + snapY); 
+draw_text(30, 240, "Fred Path Index: " + string(inst_fred.path_index));

@@ -5,8 +5,8 @@ function ai_action_waypoint(props){
 		var x_cell = props.waypoint.x div props.cellSize;
 		var y_cell = props.waypoint.y div props.cellSize;
 	
-		var position_x = (x_cell * props.cellSize) + (props.cellSize / 2);
-		var position_y = (y_cell * props.cellSize) + (props.cellSize / 2);
+		var position_x = round((x_cell * props.cellSize) + (props.cellSize / 2));
+		var position_y = round((y_cell * props.cellSize) + (props.cellSize / 2));
 	
 		mp_grid_path(props.grid, props.path, id.x, id.y, position_x, position_y, false);
 		path_start(props.path, props.speed, path_action_stop, true);
