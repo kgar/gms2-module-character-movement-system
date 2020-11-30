@@ -19,12 +19,28 @@ function ai_action_waypoint(props){
 	}
 	
 	// Increment
-	// TODO: handle collisions
-	// TODO: reroute? did the target move?
+	var collisionImminent = collision_circle(
+		x + lengthdir_x(props.speed, direction), 
+		y + lengthdir_y(props.speed, direction), 
+		props.cellSize / 2 - 2, 
+		obj_solid, 
+		false, 
+		true);
+		
+	if (collisionImminent) {
+		path_position = path_positionprevious;
+		isMoving = false;
+		path_end();
+		
+	}
+	else if (isMoving == false) {
+		// restart/reroute the path.
+		props.started = false;
+	}
 	
 	// Transition
 	if (path_position == 1) {
-		isMoving = false;
+		id.isMoving = false;
 		return StateProgress.Transition;
 	}
 	

@@ -1,10 +1,8 @@
 # To Do
 - Implement motion planning demo room
-  - Ensure Fred cannot walk through the player
-    - When Fred collides with player, make him wait in place until the player moves
-    - When Fred is waiting in place, ensure he's just standing in place, not walking
-  - Upgrade collision management to include some optional handlers for a collision
-    - Default: Wait for obstacle to move
+  - Do some more corner / edge case tests for Fred's collision logic.
+  - Upgrade collision management to include some optional temperaments when handling a collision
+    - Default: Wait for obstacle to move; and then wait for a range of 250-750 ms of clearance before resuming route. Restart timer when collision still imminent.
     - Wait for a random period of time and then reroute
       - This'll be tricky, because they could both be in the same grid cell. How do I handle that?
     - Reroute immediately
