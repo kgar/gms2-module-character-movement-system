@@ -11,6 +11,8 @@ walkRightSprite = spr_fghtr2_walk_right;
 walkUpSprite = spr_fghtr2_walk_up;
 walkDownSprite = spr_fghtr2_walk_down;
 
+isMoving = false;
+
 image_speed = 1;
 
 function setDirectionalAnimation(direction, up, down, left, right) {

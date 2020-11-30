@@ -13,6 +13,8 @@ function ai_action_waypoint(props){
 		
 		props.started = true;
 		
+		isMoving = true;
+		
 		return StateProgress.Continue;
 	}
 	
@@ -22,6 +24,7 @@ function ai_action_waypoint(props){
 	
 	// Transition
 	if (path_position == 1) {
+		isMoving = false;
 		return StateProgress.Transition;
 	}
 	
