@@ -1,11 +1,16 @@
 # To Do
 - Implement motion planning demo room
-  - For any NPC who is walking a path, add eventing for detecting a collision with obj_solid and set current path position to previous
+  - Ensure Fred cannot walk through the player
+    - When Fred collides with player, make him wait in place until the player moves
+    - When Fred is waiting in place, ensure he's just standing in place, not walking
   - Upgrade collision management to include some optional handlers for a collision
     - Default: Wait for obstacle to move
     - Wait for a random period of time and then reroute
+      - This'll be tricky, because they could both be in the same grid cell. How do I handle that?
     - Reroute immediately
+      - This'll be tricky, because they could both be in the same grid cell. How do I handle that?
     - Wait for a random period and then enable pass-through 
+  - Have a toggle for Fred to use each kind of "temperament" (CanWait, InAHurry, DecideToPushThrough)
   - Using a sequential state machine, ensure 
     - the NPC reroutes when encountering a collision
     - the NPC does not overlap with a collision place

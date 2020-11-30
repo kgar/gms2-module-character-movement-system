@@ -25,6 +25,7 @@
     {"isDnD":false,"eventNum":27,"eventType":9,"collisionObjectId":null,"parent":{"name":"obj_mp_demo_controller","path":"objects/obj_mp_demo_controller/obj_mp_demo_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"parent":{"name":"obj_mp_demo_controller","path":"objects/obj_mp_demo_controller/obj_mp_demo_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":5,"eventType":7,"collisionObjectId":null,"parent":{"name":"obj_mp_demo_controller","path":"objects/obj_mp_demo_controller/obj_mp_demo_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":2,"eventType":3,"collisionObjectId":null,"parent":{"name":"obj_mp_demo_controller","path":"objects/obj_mp_demo_controller/obj_mp_demo_controller.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],

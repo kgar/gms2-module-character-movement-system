@@ -1,1 +1,1 @@
-//audio_play_sound(snd_port_town, 1, true);
+audio_play_sound(snd_port_town, 1, true);
