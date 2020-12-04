@@ -1,6 +1,7 @@
 # To Do
 - Implement motion planning demo room
-  - Do some more corner / edge case tests for Fred's collision logic.
+  - Upgrade state machines to be nestable 🔥🔥🔥
+    - Maybe leverage props?    
   - Upgrade collision management to include some optional temperaments when handling a collision
     - Default: Wait for obstacle to move; and then wait for a range of 250-750 ms of clearance before resuming route. Restart timer when collision still imminent.
     - Wait for a random period of time and then reroute

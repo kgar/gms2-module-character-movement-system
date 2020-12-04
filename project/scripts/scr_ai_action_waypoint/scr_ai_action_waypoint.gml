@@ -19,12 +19,13 @@ function ai_action_waypoint(props){
 	}
 	
 	// Increment
-	var collisionImminent = collision_circle(
-		x + lengthdir_x(props.speed, direction), 
-		y + lengthdir_y(props.speed, direction), 
-		props.cellSize / 2 - 2, 
-		obj_solid, 
-		false, 
+	var collisionImminent = collision_rectangle(
+		bbox_left + lengthdir_x(walkSpeed * 2, direction), 
+		bbox_top + lengthdir_y(walkSpeed * 2, direction), 
+		bbox_right + lengthdir_x(walkSpeed * 2, direction),
+		bbox_bottom + lengthdir_y(walkSpeed * 2, direction),
+		obj_solid,
+		false,
 		true);
 		
 	if (collisionImminent) {
