@@ -1,1 +1,1 @@
-state_machine_try_step();
+state_machine_try_step(machine);

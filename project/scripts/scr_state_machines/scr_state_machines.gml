@@ -1,33 +1,39 @@
 function seq_state_machine_create(params, loop){
 	var length = array_length(params);
-	seq_state_machine_states = array_create(length);
-	seq_state_machine_props = array_create(length);
-	seq_state_machine_index = 0;
+	
+	var states = array_create(length);
+	var props = array_create(length);
+	var index = 0;
 	
 	for (var i = 0; i < length; i++) {
 		var param = params[i];
-		seq_state_machine_states[i] = variable_struct_get(param, "state");
-		seq_state_machine_props[i] = variable_struct_get(param, "props");
+		states[i] = variable_struct_get(param, "state");
+		props[i] = variable_struct_get(param, "props");
 	}
 	
 	if (loop != true) {
-		array_push(seq_state_machine_states, ai_action_stop);
-		array_push(seq_state_machine_props, undefined);
+		array_push(states, ai_action_stop);
+		array_push(props, undefined);
 	}
 	
-	state_machine_events_apply(seq_state_machine_step, undefined);
+	return {
+		states: states,
+		props: props,
+		index: index,
+		step: seq_state_machine_step
+	}
 }
 
-function seq_state_machine_step() {
-	var action = seq_state_machine_states[seq_state_machine_index];
-	var props = seq_state_machine_props[seq_state_machine_index];
+function seq_state_machine_step(machine) {
+	var action = machine.states[machine.index];
+	var props = machine.props[machine.index];
 	
 	var progress = action(props);
 	if (progress == StateProgress.Transition) {
-		seq_state_machine_index = (seq_state_machine_index + 1) % array_length(seq_state_machine_states);
+		machine.index = (machine.index + 1) % array_length(machine.states);
 	}
 	else if (progress == StateProgress.Stop) {
-		state_machine_events_remove();
+		machine.progress = StateProgress.Stop;
 	}
 }
 
@@ -35,50 +41,40 @@ function seq_state_machine_step() {
 /// @param states  The states to execute
 /// @param state*  Optional starting state, else will be 0.
 function unmanaged_state_machine_create(states) {
-	unmanaged_state_machine_states = states;
-	
-	unmanaged_state_machine_index = argument_count > 1
-		? argument[1]
-		: 0;
-	
-	return unmanaged_state_machine_step;
+	var machine = {
+		states: states,
+		index: argument_count > 1
+			? argument[1]
+			: 0,
+		progress: StateProgress.Continue,
+		step: unmanaged_state_machine_step
+	};
+		
+	return machine;
 }
 
-function unmanaged_state_machine_step() {
-	var action = unmanaged_state_machine_states[unmanaged_state_machine_index];
+function unmanaged_state_machine_step(machine) {
+	var action = machine.states[machine.index];
 	
-	unmanaged_state_machine_index = action();
-	if (unmanaged_state_machine_index == StateProgress.Stop) {
-		state_machine_events_remove();
+	machine.index = action();
+	if (machine.index == StateProgress.Stop) {
+		machine.progress = StateProgress.Stop;
 	}
 }
 
-function state_machine_events_apply(_step, _cleanUp) {
-	stateMachineStep = _step;
-	stateMachineCleanUp = _cleanUp;
-}
-
-function state_machine_events_remove() {
-	stateMachineStep = undefined;
-	
-	var cleanUp = variable_instance_get(id, "stateMachineCleanUp");
-	if (cleanUp != undefined) {
-		script_execute(cleanUp);
-		stateMachineCleanUp = undefined;
+function state_machine_try_step(machine) {
+	if (machine == undefined) {
+		return;
 	}
-}
-
-function state_machine_try_step() {
-	var step = variable_instance_get(id, "stateMachineStep");
-	if (step != undefined) {
+	
+	var progress = variable_struct_get(machine, "progress");
+	if (progress == StateProgress.Stop) {
+		return;
+	}
+	
+	var step = variable_struct_get(machine, "step");
+	if (machine != undefined) {
 		script_execute(step);
-	}
-}
-
-function state_machine_try_clean_up() {
-	var cleanUp = variable_instance_get(id, "stateMachineCleanUp");
-	if (cleanUp != undefined) {
-		script_execute(cleanUp);
 	}
 }
 

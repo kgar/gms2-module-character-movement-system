@@ -24,7 +24,7 @@ if (mouse_check_button_pressed(mb_left) && !fredIsMoving) {
 				props: ai_action_waypoint_props_create(coords, fredPath, global.grid, 32, 2)
 			}
 		];
-		seq_state_machine_create(params, false);
+		machine = seq_state_machine_create(params, false);
 	}
 }
 

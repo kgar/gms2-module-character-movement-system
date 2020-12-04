@@ -15,8 +15,8 @@ function ai_bumbler_apply(_zoneX1, _zoneY1, _zoneX2, _zoneY2) {
 	states[AI_BumblerState.Move] = ai_bumbler_move;
 	var startingState = irandom_range(AI_BumblerState.Wait, AI_BumblerState.Move);
 	
-	var stateMachineStepFunction = unmanaged_state_machine_create(states, startingState);
-	state_machine_events_apply(stateMachineStepFunction, undefined);
+	var machine = unmanaged_state_machine_create(states, startingState);
+	return machine;
 }
 
 function ai_bumbler_wait() {

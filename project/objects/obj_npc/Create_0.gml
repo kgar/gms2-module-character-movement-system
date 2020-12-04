@@ -12,6 +12,7 @@ walkUpSprite = spr_fghtr2_walk_up;
 walkDownSprite = spr_fghtr2_walk_down;
 
 isMoving = false;
+machine = undefined;
 
 image_speed = 1;
 
